@@ -1,0 +1,11 @@
+<h1>{{ object.title }}</h1>
+<p>{{ object.description }}</p>
+<p>Reporter: {{ object.assigned_user }}</p>
+<p>Published: {{ object.done }}</p>
+<!--<p>Published: {{ object.created }}</p>-->
+<!--<p>Published: {{ object.updated }}</p>-->
+<p>Published: {{ object.created_by.username }}</p>
+<p>Published: {{ object.update_by.username }}</p>
+<p>Published: {{ object.priority.name }}</p>
+<p>Date: {{ now|date }}</p>
+<a href="{% url 'todo_list' %}">Back</a>
