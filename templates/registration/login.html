@@ -1,11 +1,14 @@
 {% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
 
-{% block title %}Login{% endblock %}
-{% block content %}
+
   <h2>Login</h2>
+{% block content %}
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {% bootstrap_form form %}
+
     <button type="submit">Login</button>
   </form>
 {% endblock %}

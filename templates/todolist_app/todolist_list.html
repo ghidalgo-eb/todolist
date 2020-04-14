@@ -1,12 +1,16 @@
 {% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
 
 <h1>Todo List</h1>
 <h2>{% if user.is_authenticated %}Bienvenido, {{ user.username }}.{% endif %}</h2>
 {% block content %}
+
 <table class="table">
 {% for todo in object_list %}
     <tr>
-    <td>{{ line.todo.id }}:  {{ line.todo.title }} - {{ line.todo.done }}
+    <td>{{ todo.id }}:  {{ todo.title }} - {{ todo.done }}
         <a href="{% url 'todo_update' todo.id %}">Edit</a>
         <a href="{% url 'todo_delete' todo.id %}">- Delete</a>
         <a href="{% url 'todo_assign' todo.id %}">- Assign user</a>
@@ -17,9 +21,9 @@
 {% endfor %}
 
 </table>
-<a href="{% url 'todo_create' %}">Create</a>
-    <a href="{% url 'logout' %}">Logout</a>
+<button class="btn btn-large"><a href="{% url 'todo_create' %}">Create new todo</a></button>
 
+<button class="btn float-right"> <a href="{% url 'logout' %}">Logout</a><button>
 
 {% endblock %}
 
