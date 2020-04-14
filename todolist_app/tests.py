@@ -117,8 +117,6 @@ class TestTodoListCRUD(TestCase):
             '/delete/{}/'.format(self.todo_list_user.id),
             follow=True
         )
-        import ipdb
-        ipdb.set_trace()
         self.assertTrue(True)
 
     def test_delete_todolist_incorrect(self):
