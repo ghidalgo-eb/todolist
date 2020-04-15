@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.7.4"
+  - "3.7.3"
 cache: pip
 env:
   - DJANGO_VERSION=3.0.5
