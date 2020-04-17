@@ -25,7 +25,7 @@ SECRET_KEY = '$1eg-ayxflhm+@$zvsei8n79z%^8eqlt4k%#)wwl^fo9^^8bg&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://todolist-ghidalgo.herokuapp.com/', 'immense-badlands-38399.herokuapp.com']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todolist_app.apps.TodolistAppConfig',
+    'todolist_app',
     'bootstrap4',
 ]
 
